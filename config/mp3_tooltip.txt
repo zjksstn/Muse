@@ -1,0 +1,16 @@
+tp_butt1：更换所选择MP3的封面图片
+tp_butt2：更新MP3的元数据(支持全曲库操作)
+tp_butt3：音频转换成mp3格式(支持全曲库操作)，提取视频中的音频为mp3
+tp_butt4：变更曲库路径
+tp_butt5：关闭 MP3_TOOLS
+tp_butt6：依lst列表内容更新车载音乐U盘
+tp_butt7：从Googls搜索封面图片
+tp_butt8：从Googls搜索结果，选择封面图片下载并应用到MP3
+tp_butt9：曲库封面一致化
+tp_butt10：格式化歌词并保存
+tp_butt16：打开LDDC搜索歌词
+tp_butt11：MP3曲库诊断，格式化文件名(-转换为_)
+tp_butt12：曲库按文件名字母排序
+tp_butt13：曲库按文件修改时间排序
+tp_butt14：将所选曲目保存为播放列表
+tp_butt15：帮助

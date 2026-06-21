@@ -1,0 +1,267 @@
+{
+  "widgets": [
+    {
+      "type": "Frame",
+      "name": "tp_tf",
+      "pack": {
+        "fill": "x"
+      },
+      "options": {
+        "relief": "groove"
+      },
+      "children": [
+        {
+          "type": "Button",
+          "name": "tp_butt1",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/cover_icon.png",
+            "command": "set_mp3cover"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt2",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/metadata_icon.png",
+            "command": "set_metadata"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt3",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/conver.png",
+            "command": "conver_to_mp3"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt4",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/synchronize_icon.png",
+            "command": "setpath_mp3lib"
+          }
+        },{
+          "type": "Button",
+          "name": "tp_butt9",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/identical.png",
+            "command": "cover_identical"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt6",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/playlist_icon.png",
+            "command": "playerlist_syn"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt7",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/search_cover.png",
+            "command": "googls_cover"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt8",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/cover_download.png",
+            "command": "googls_downloadenter"
+          }
+        },
+
+        {
+          "type": "Button",
+          "name": "tp_butt10",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/lrc_format.png",
+            "command": "lrc_format"
+          }
+        },{
+          "type": "Button",
+          "name": "tp_butt16",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/folder.png",
+            "command": "load_lddc"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt11",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/check.png",
+            "command": "check_metadata"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt12",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/sort_letter.png",
+            "command": "reload_mp3_to_treeview"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt13",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/sort_time.png",
+            "command": "reload_mp3_to_treeview_by_mtime"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt14",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/save_aslst.png",
+            "command": "save_selected_items_to_lst"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt5",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/folder_icon.png",
+            "command": "closed_tools"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "tp_butt15",
+          "pack": {
+            "side": "left"
+          },
+          "options": {
+            "image": "images/help.png",
+            "command": "help_show"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frame",
+      "name": "tp_lf",
+      "pack": {
+        "fill": "both",
+        "side": "left"
+      },
+      "options": {
+        "relief": "ridge"
+      },
+      "children": [
+        {
+          "type": "Treeview",
+          "name": "tp_trel1",
+          "pack": {
+            "fill": "both",
+            "side": "left",
+            "expand": "true"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frame",
+      "name": "tp_rf",
+      "pack": {
+        "fill": "x",
+        "expand": 0
+      },
+      "options": {
+        "relief": "groove"
+      },
+      "children": [
+        {
+          "type": "Label",
+          "name": "tp_labr1",
+          "pack": {
+              "fill": "x"
+          },
+          "options": {
+            "relief": "groove",
+            "image": "images/117.png"
+          }
+        },
+        {
+          "type": "Label",
+          "name": "tp_labr2",
+          "pack": {
+              "fill": "x",
+              "side":"top"
+
+          },
+          "options": {
+            "textvariable": "mp3info_show",
+            "anchor": "nw",
+            "relief": "groove",
+            "font": "NotoSansSC 15",
+            "foreground": "#000000"
+          }
+        },
+        {
+          "type": "ScrolledText",
+          "name": "tp_texr1",
+                    "pack": {
+              "fill": "both",
+              "side":"top",
+              "expand":"true"
+          },
+          "options": {
+
+            "font": "NotoSansSC 15",
+            "background": "lightyellow"
+          }
+        }
+      ]
+    }
+  ]
+}

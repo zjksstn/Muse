@@ -1,0 +1,388 @@
+{
+  "widgets": [
+    {
+      "type": "Label",
+      "name": "labt1",
+      "pack": {
+        "fill": "x"
+      },
+      "options": {
+        "text": "MP3播放器",
+        "anchor": "center"
+      }
+    },
+    {
+      "type": "Separator",
+      "name": "sept1",
+      "pack": {
+        "fill": "x"
+      }
+    },
+    {
+      "type": "Frame",
+      "name": "tf",
+      "pack": {
+        "fill": "x"
+      },
+      "children": [
+        {
+          "type": "Button",
+          "name": "butt1",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/play.png",
+            "command": "play"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt2",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/pause.png",
+            "command": "mypause"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt3",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/stop.png",
+            "command": "mystop"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt4",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/mute.png",
+            "command": "mymute"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt5",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/previous.png",
+            "command": "previous"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt6",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/next.png",
+            "command": "next"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "butt7",
+          "pack": {
+            "side": "left",
+            "padx": 5
+          },
+          "options": {
+            "image": "images/equa.png",
+            "command": "false_images"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frame",
+      "name": "mf",
+      "pack": {
+        "fill": "x",
+        "pady": 2
+      },
+      "children": [
+        {
+          "type": "Label",
+          "name": "labm20",
+          "grid": {
+            "row": 0,
+            "column": 0,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "播放模式："
+          }
+        },
+        {
+          "type": "Radiobutton",
+          "name": "radm1",
+          "grid": {
+            "row": 0,
+            "column": 1,
+            "sticky": "ns"
+          },
+          "options": {
+            "variable": "play_mode",
+            "value": 1,
+            "text": "单曲"
+          }
+        },
+        {
+          "type": "Radiobutton",
+          "name": "radm2",
+          "grid": {
+            "row": 0,
+            "column": 2,
+            "sticky": "ns"
+          },
+          "options": {
+            "variable": "play_mode",
+            "value": 2,
+            "text": "列表"
+          }
+        },
+        {
+          "type": "Radiobutton",
+          "name": "radm3",
+          "grid": {
+            "row": 0,
+            "column": 3,
+            "sticky": "ns"
+          },
+          "options": {
+            "variable": "play_mode",
+            "value": 3,
+            "text": "随机"
+          }
+        },
+        {
+          "type": "Label",
+          "name": "labm2",
+          "grid": {
+            "row": 1,
+            "column": 0,
+            "sticky": "ns"
+          },
+          "options": {
+            "textvariable": "mp3pres",
+            "wraplength": 450
+          }
+        },
+        {
+          "type": "Scale",
+          "name": "scam1",
+          "options": {
+            "from_": 0,
+            "to": 100,
+            "orient": "horizontal",
+            "showvalue": 0,
+            "length": 200
+          },
+          "grid": {
+            "row": 1,
+            "column": 1,
+            "columnspan": 2,
+            "sticky": "ns"
+          }
+        },
+        {
+          "type": "Label",
+          "name": "labm3",
+          "grid": {
+            "row": 1,
+            "column": 3,
+            "sticky": "ns"
+          },
+          "options": {
+            "textvariable": "mp3lens",
+            "wraplength": 450
+          }
+        },
+        {
+          "type": "Label",
+          "name": "labm1",
+          "grid": {
+            "row": 2,
+            "column": 0,
+            "columnspan": 4,
+            "sticky": "ns"
+          },
+          "options": {
+            "textvariable": "mp3info",
+            "wraplength": 450
+          }
+        },
+        {
+          "type": "Label",
+          "name": "labm4",
+          "grid": {
+            "row": 3,
+            "column": 0,
+            "columnspan": 4,
+            "padx": 3,
+            "sticky": "ns"
+          },
+          "options": {
+            "textvariable": "lrcshow",
+            "relief": "groove",
+            "font": "楷体 15",
+            "foreground": "#00799f",
+            "width": 34,
+            "wraplength": 600
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frame",
+      "name": "bf",
+      "pack": {
+        "fill": "x"
+      },
+      "children": [
+        {
+          "type": "Listbox",
+          "name": "lisb1",
+          "pack": {
+            "fill": "x",
+            "side": "left",
+            "padx": 1,
+            "expand": 1
+          },
+          "options": {
+            "selectbackground": "#9ACD32",
+            "relief": "groove"
+          }
+        },
+        {
+          "type": "Scrollbar",
+          "name": "scrb1",
+          "pack": {
+            "fill": "y",
+            "side": "right"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frame",
+      "name": "ef",
+      "pack": {
+        "fill": "both",
+        "pady": 2
+      },
+      "children": [
+        {
+          "type": "Button",
+          "name": "bute1",
+          "grid": {
+            "row": 0,
+            "column": 0,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "载入列表",
+            "command": "load_list"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "bute2",
+          "grid": {
+            "row": 0,
+            "column": 1,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "保存列表",
+            "command": "save_list"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "bute3",
+          "grid": {
+            "row": 0,
+            "column": 2,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "清空列表",
+            "command": "list_clear"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "bute4",
+          "grid": {
+            "row": 1,
+            "column": 0,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "添加曲目",
+            "command": "add_mp3"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "bute5",
+          "grid": {
+            "row": 1,
+            "column": 1,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "删除曲目",
+            "command": "del_mp3"
+          }
+        },
+        {
+          "type": "Button",
+          "name": "bute6",
+          "grid": {
+            "row": 1,
+            "column": 2,
+            "sticky": "ns"
+          },
+          "options": {
+            "text": "MP3工具",
+            "command": "mp3_tools"
+          }
+        },
+        {
+          "type": "Label",
+          "name": "labe1",
+          "grid": {
+            "row": 2,
+            "column": 0,
+            "columnspan": 4,
+            "padx": 2,
+            "pady": 10
+          },
+          "options": {
+            "image": "images/equalizer.png"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+============ 一键打包（推荐）============
+在项目根目录 F:\Muse 下打开 PowerShell，执行下面这一整条命令：
+（先用 venv 的 pyinstaller 打包，再把资源目录复制到 exe 旁，缺一不可）
+
+.\.venv\Scripts\pyinstaller.exe --onedir --noconsole --icon=v2.ico --noconfirm muse.py; foreach ($d in 'images','config','bin','LDDC') { Copy-Item $d "dist\muse\$d" -Recurse -Force }
+
+打包完成后，完整可运行的程序在：F:\Muse\dist\muse\
+运行 / 分发时，muse.exe 必须和 _internal、images、config、bin、LDDC 这些文件夹放在一起。
+
+
+============ 说明 ============
+--onedir   生成程序目录（exe + _internal 文件夹），不可拆分
+--onefile  只生成单个 exe（启动慢、每次解压到临时目录，config 写入不持久，不推荐本项目）
+--noconsole 隐藏控制台黑窗（含 pygame 输出）
+--noconfirm 覆盖旧 dist 时不询问
+
+先确认 PyInstaller 是否已安装： .\.venv\Scripts\pip.exe show pyinstaller
+未安装则： .\.venv\Scripts\pip.exe install pyinstaller
+
+
+============ 为什么要单独复制资源目录 ============
+程序用相对路径读取 images/、config/、bin/、LDDC/，而 spec 默认 datas=[] 不打包它们，
+且 COLLECT 每次会删除重建 dist\muse\，所以必须在打包后复制。上面的一键命令已包含这一步。
+
+
+============ 常见报错 ============
+1) “Failed to load Python DLL ... python3XX.dll，找不到指定的模块”
+   原因：单独拿走了 muse.exe，丢了同级的 _internal 文件夹。
+   解决：始终保留整个 dist\muse\ 文件夹，不要只复制 exe。
+   注意：项目根目录 F:\Muse\Muse.exe 是用旧 Python3.13 打的废弃文件，旁边没有 _internal，
+        一打开就报这个错。请勿使用它，可直接删除。
+
+2) 启动闪退、找不到 widgets.json / v2.ico
+   原因：资源目录没复制到 exe 旁。
+   解决：执行上面一键命令里的 Copy-Item 部分。
+
+
+============ 注册为 mp3 默认打开程序（双击 mp3 自动在 Muse 播放）============
+打包并复制资源后，在 dist\muse\ 目录执行：
+   .\muse.exe --register
+之后右键任意 mp3 → 打开方式 → 选择其他应用 → 选 Muse → 勾选“始终”。
+取消注册： .\muse.exe --unregister

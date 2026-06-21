@@ -1,0 +1,16 @@
+butt1：播放音乐
+butt2：暂停|恢复
+butt3：停止播放
+butt4：静音|恢复
+butt5：播放上一首
+butt6：播放下一首
+butt7：均衡器闪烁|显示封面
+radm1：单曲播放
+radm2：列表循环播放
+radm3：随机播放
+bute1：载入播放列表
+bute2：保存播放列表
+bute3：清空播放列表
+bute4：向列表中添加曲目
+bute5：从列表中删除曲目
+bute6：MP3相关工具
