@@ -1,3 +1,5 @@
+[English](README.en.md) | 简体中文
+
 # Muse
 
 一个基于 Python（tkinter + pygame）的本地 MP3 播放器，支持歌词同步显示、封面展示、曲库管理、元数据编辑、音视频格式转换，并可注册为系统默认 MP3 播放程序。
