@@ -2,9 +2,22 @@
 
 # Muse
 
+[![下载](https://img.shields.io/github/v/release/zjksstn/Muse?label=下载&color=blue)](https://github.com/zjksstn/Muse/releases/latest)
+
 一个基于 Python（tkinter + pygame）的本地 MP3 播放器，支持歌词同步显示、封面展示、曲库管理、元数据编辑、音视频格式转换，并可注册为系统默认 MP3 播放程序。
 
 > 本项目前身为 [sstnplayer](https://github.com/zjksstn/sstnplayer)，经过大幅重写后更名为 Muse。
+
+## 下载（预编译，免装 Python）
+
+从 [**Releases**](https://github.com/zjksstn/Muse/releases) 页面下载开箱即用的版本，两个版本按需选择：
+
+| 版本 | 文件 | 大小 | 适合 |
+|---|---|---|---|
+| 完整版 | `Muse_vX_win64.zip` | ~240MB | 需要歌词下载(LDDC)、音视频转换(FFmpeg)的用户 |
+| 轻量版 | `Muse_Sim_vX_win64.zip` | ~19MB | 只想要纯净播放、追求小体积的用户 |
+
+解压后双击 `muse.exe`（轻量版 `muse_sim.exe`）。**`.exe` 必须与同目录的 `_internal`、`images`、`config`（完整版还有 `bin`、`LDDC`）等文件夹放在一起，不要单独移动 exe。** 仅支持 Windows 64 位。
 
 ## 功能特性
 

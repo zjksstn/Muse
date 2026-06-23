@@ -2,6 +2,8 @@ English | [简体中文](README.md)
 
 # Muse
 
+[![Download](https://img.shields.io/github/v/release/zjksstn/Muse?label=Download&color=blue)](https://github.com/zjksstn/Muse/releases/latest)
+
 A local MP3 player built with Python (tkinter + pygame), featuring synced lyrics, album-art display, library management, metadata editing, and audio/video format conversion. It can also register itself as the system's default MP3 player.
 
 > Formerly [sstnplayer](https://github.com/zjksstn/sstnplayer); renamed to Muse after a major rewrite.
